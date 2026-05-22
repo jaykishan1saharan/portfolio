@@ -1,15 +1,18 @@
 type Props = {
-service: any;
+  service: any;
+  onClick: () => void;
 };
 
 export default function ServiceCard({
-service,
+  service,
+  onClick,
 }: Props) {
 
-return (
+  return (
 
-<div
-className="
+    <div
+      onClick={onClick}
+      className="
 group
 relative
 overflow-hidden
@@ -27,10 +30,10 @@ duration-500
 hover:-translate-y-2
 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]
 "
->
+    >
 
-<div
-className="
+      <div
+        className="
 absolute
 inset-0
 bg-gradient-to-br
@@ -40,48 +43,50 @@ opacity-0
 group-hover:opacity-100
 transition
 "
-/>
+      />
 
-<div className="relative z-10">
+      <div className="relative z-10">
 
-<div
-  className="
-  text-5xl
-  mb-4
-  animate-bounce
-  "
->
-{service.icon}
-</div>
+        <div
+          className="text-5xl mb-4 animate-bounce"
+        >
+          {service.icon}
+        </div>
 
-<h3 className="text-2xl font-bold text-white">
-{service.title}
-</h3>
+        <h3 className="text-2xl font-bold text-white">
+          {service.title}
+        </h3>
 
-<p className="text-gray-400 mt-4">
-{service.description}
-</p>
+        <p className="text-gray-400 mt-4">
+          {service.description}
+        </p>
 
-<ul className="mt-6 space-y-2">
+        <ul className="mt-6 space-y-2">
 
-{service.features.map(
-(item: string) => (
+          {(service.features || []).map(
+            (item: string) => (
 
-<li
-key={item}
-className="text-cyan-300"
->
-✓ {item}
-</li>
+              <li
+                key={item}
+                className="text-cyan-300"
+              >
+                ✓ {item}
+              </li>
 
-)
-)}
+            )
+          )}
 
-</ul>
+        </ul>
 
-</div>
+        <button
+          className="mt-6 px-5 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+        >
+          View Details →
+        </button>
 
-</div>
+      </div>
 
-);
+    </div>
+
+  );
 }

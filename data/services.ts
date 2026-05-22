@@ -1,67 +1,397 @@
 export const services = [
+    {
+        title: "Frontend Development",
 
-{
-title: "Frontend Development",
+        icon: "🎨",
 
-icon: "🎨",
+        description:
+            "Modern responsive websites using React, Next.js and Tailwind CSS.",
 
-description:
-"Modern responsive websites using React, Next.js and Tailwind CSS.",
+        features: [
+            "Responsive Design",
+            "Animations",
+            "Modern UI",
+            "Performance Optimized",
+        ],
 
-features: [
-"Responsive Design",
-"Animations",
-"Modern UI",
-"Performance Optimized"
-]
-},
+        provide: [
+            "Portfolio Websites",
+            "Landing Pages",
+            "Business Websites",
+            "Admin Dashboards",
+        ],
 
-{
-title: "Full Stack Development",
+        process: [
+            "Requirement Discussion",
+            "Design Planning",
+            "Frontend Development",
+            "Testing & Optimization",
+            "Final Delivery",
+        ],
 
-icon: "⚡",
+        pricing: [
+            {
+                name: "Basic",
+                price: "₹3,999",
+                features: [
+                    "1 Page Website",
+                    "Responsive Design",
+                    "Contact Form"
+                ]
+            },
 
-description:
-"Complete web applications with frontend, backend and database integration.",
+            {
+                name: "Standard",
+                price: "₹8,999",
+                features: [
+                    "5 Pages",
+                    "Animations",
+                    "SEO Setup",
+                    "Responsive Design"
+                ]
+            },
 
-features: [
-"Authentication",
-"APIs",
-"Database",
-"Deployment"
-]
-},
+            {
+                name: "Premium",
+                price: "₹14,999",
+                features: [
+                    "Unlimited Pages",
+                    "Admin Panel",
+                    "SEO",
+                    "Priority Support"
+                ]
+            }
+        ],
 
-{
-title: "UI / UX Design",
+        terms: [
+            "50% advance payment required",
+            "Timeline depends on project scope",
+            "Free bug fixes after delivery",
+            "Source code provided on completion",
+        ],
 
-icon: "✨",
+        delivery: [
+            "Day 1 Requirement Discussion",
+            "Day 2 Design",
+            "Day 3 Development",
+            "Day 4 Testing",
+            "Day 5 Delivery"
+        ],
 
-description:
-"Beautiful interfaces focused on user experience and conversions.",
+        faq: [
 
-features: [
-"Wireframes",
-"Prototypes",
-"User Flow",
-"Design Systems"
-]
-},
+            {
+                q: "Do you provide hosting?",
+                a: "Yes, I can help deploy the project."
+            },
 
-{
-title: "AI Integration",
+            {
+                q: "Do you provide source code?",
+                a: "Yes, complete source code is included."
+            },
 
-icon: "🤖",
+            {
+                q: "Can I request revisions?",
+                a: "Yes, revisions are included."
+            }
 
-description:
-"AI powered solutions and automation systems.",
+        ],
+    },
 
-features: [
-"Chatbots",
-"Automation",
-"AI APIs",
-"Custom Solutions"
-]
-}
+    {
+        title: "Full Stack Development",
 
+        icon: "⚡",
+
+        description:
+            "Complete web applications with frontend, backend and database integration.",
+
+        features: [
+            "Authentication",
+            "REST APIs",
+            "Database Integration",
+            "Deployment",
+        ],
+
+        provide: [
+            "Custom Web Applications",
+            "Admin Panels",
+            "Booking Systems",
+            "E-commerce Platforms",
+        ],
+
+        process: [
+            "Requirement Analysis",
+            "Database Design",
+            "Backend Development",
+            "Frontend Integration",
+            "Deployment",
+        ],
+
+        pricing: [
+            {
+                name: "Basic",
+                price: "₹3,999",
+                features: [
+                    "1 Page Website",
+                    "Responsive Design",
+                    "Contact Form"
+                ]
+            },
+
+            {
+                name: "Standard",
+                price: "₹8,999",
+                features: [
+                    "5 Pages",
+                    "Animations",
+                    "SEO Setup",
+                    "Responsive Design"
+                ]
+            },
+
+            {
+                name: "Premium",
+                price: "₹14,999",
+                features: [
+                    "Unlimited Pages",
+                    "Admin Panel",
+                    "SEO",
+                    "Priority Support"
+                ]
+            }
+        ],
+
+        terms: [
+            "50% advance payment required",
+            "Hosting charges separate",
+            "Project scope freeze after approval",
+            "30 days support after delivery",
+        ],
+
+        delivery: [
+            "Day 1 Requirement Discussion",
+            "Day 2 Design",
+            "Day 3 Development",
+            "Day 4 Testing",
+            "Day 5 Delivery"
+        ],
+
+        faq: [
+
+            {
+                q: "Do you provide hosting?",
+                a: "Yes, I can help deploy the project."
+            },
+
+            {
+                q: "Do you provide source code?",
+                a: "Yes, complete source code is included."
+            },
+
+            {
+                q: "Can I request revisions?",
+                a: "Yes, revisions are included."
+            }
+
+        ],
+    },
+
+    {
+        title: "UI / UX Design",
+
+        icon: "✨",
+
+        description:
+            "Beautiful interfaces focused on user experience and conversions.",
+
+        features: [
+            "Wireframes",
+            "Prototypes",
+            "User Flow",
+            "Design Systems",
+        ],
+
+        provide: [
+            "Website UI Design",
+            "Mobile App Design",
+            "Dashboard Design",
+            "Landing Page Design",
+        ],
+
+        process: [
+            "Research",
+            "Wireframing",
+            "UI Design",
+            "Prototype Creation",
+            "Final Handoff",
+        ],
+
+        pricing: [
+            {
+                name: "Basic",
+                price: "₹3,999",
+                features: [
+                    "1 Page Website",
+                    "Responsive Design",
+                    "Contact Form"
+                ]
+            },
+
+            {
+                name: "Standard",
+                price: "₹8,999",
+                features: [
+                    "5 Pages",
+                    "Animations",
+                    "SEO Setup",
+                    "Responsive Design"
+                ]
+            },
+
+            {
+                name: "Premium",
+                price: "₹14,999",
+                features: [
+                    "Unlimited Pages",
+                    "Admin Panel",
+                    "SEO",
+                    "Priority Support"
+                ]
+            }
+        ],
+
+        terms: [
+            "Design revisions included",
+            "Final files delivered in Figma",
+            "Additional revisions charged separately",
+            "Advance payment required",
+        ],
+
+        delivery: [
+            "Day 1 Requirement Discussion",
+            "Day 2 Design",
+            "Day 3 Development",
+            "Day 4 Testing",
+            "Day 5 Delivery"
+        ],
+
+        faq: [
+
+            {
+                q: "Do you provide hosting?",
+                a: "Yes, I can help deploy the project."
+            },
+
+            {
+                q: "Do you provide source code?",
+                a: "Yes, complete source code is included."
+            },
+
+            {
+                q: "Can I request revisions?",
+                a: "Yes, revisions are included."
+            }
+
+        ],
+    },
+
+    {
+        title: "AI Integration",
+
+        icon: "🤖",
+
+        description:
+            "AI powered solutions and automation systems.",
+
+        features: [
+            "Chatbots",
+            "Automation",
+            "AI APIs",
+            "Custom AI Solutions",
+        ],
+
+        provide: [
+            "AI Chatbots",
+            "OpenAI Integrations",
+            "Workflow Automation",
+            "AI Assistants",
+        ],
+
+        process: [
+            "Use Case Discussion",
+            "AI Model Selection",
+            "Development",
+            "Testing",
+            "Deployment",
+        ],
+
+        pricing: [
+            {
+                name: "Basic",
+                price: "₹3,999",
+                features: [
+                    "1 Page Website",
+                    "Responsive Design",
+                    "Contact Form"
+                ]
+            },
+
+            {
+                name: "Standard",
+                price: "₹8,999",
+                features: [
+                    "5 Pages",
+                    "Animations",
+                    "SEO Setup",
+                    "Responsive Design"
+                ]
+            },
+
+            {
+                name: "Premium",
+                price: "₹14,999",
+                features: [
+                    "Unlimited Pages",
+                    "Admin Panel",
+                    "SEO",
+                    "Priority Support"
+                ]
+            }
+        ],
+
+        terms: [
+            "API costs paid separately",
+            "Custom AI training charged extra",
+            "Deployment support included",
+            "Advance payment required",
+        ],
+
+        delivery: [
+            "Day 1 Requirement Discussion",
+            "Day 2 Design",
+            "Day 3 Development",
+            "Day 4 Testing",
+            "Day 5 Delivery"
+        ],
+
+        faq: [
+
+            {
+                q: "Do you provide hosting?",
+                a: "Yes, I can help deploy the project."
+            },
+
+            {
+                q: "Do you provide source code?",
+                a: "Yes, complete source code is included."
+            },
+
+            {
+                q: "Can I request revisions?",
+                a: "Yes, revisions are included."
+            }
+
+        ],
+    },
 ];
