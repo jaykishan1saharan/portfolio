@@ -32,8 +32,8 @@ export default function Hero() {
 
     return (
         <section
-  id="home"
-  className="
+            id="home"
+            className="
   relative
   min-h-screen
   flex
@@ -50,7 +50,7 @@ export default function Hero() {
   via-[#081120]
   to-[#142850]
   "
->
+        >
             <ParticlesBackground />
 
             <div id="cursor-glow" className="cursor-glow"></div>
@@ -129,11 +129,50 @@ lg:mt-10
                 {/* SOCIAL ICONS */}
                 <div className="flex gap-6 mt-6 text-2xl justify-center lg:justify-start flex-wrap">
 
-                    <FaGithub className="text-white hover:text-gray-300 hover:scale-125 transition cursor-pointer" />
-                    <FaLinkedin className="text-[#0A66C2] hover:scale-125 transition cursor-pointer" />
-                    <FaTwitter className="text-[#1DA1F2] hover:scale-125 transition cursor-pointer" />
-                    <FaInstagram className="text-pink-500 hover:scale-125 transition cursor-pointer" />
-                    <FaFacebook className="text-[#1877F2] hover:scale-125 transition cursor-pointer" />
+                    <a
+                        href="https://github.com/jaykishan1saharan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <FaGithub className="text-white hover:text-gray-300 hover:scale-125 transition cursor-pointer" />
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/jaikishan-saharan-a67485327"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <FaLinkedin className="text-[#0A66C2] hover:scale-125 transition cursor-pointer" />
+                    </a>
+
+                    <a
+                        href="https://x.com/JaykishanS2903"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                    >
+                        <FaTwitter className="text-[#1DA1F2] hover:scale-125 transition cursor-pointer" />
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/jaykishansaharan/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <FaInstagram className="text-pink-500 hover:scale-125 transition cursor-pointer" />
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/manish.saharan.754703"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <FaFacebook className="text-[#1877F2] hover:scale-125 transition cursor-pointer" />
+                    </a>
 
                 </div>
 
@@ -167,7 +206,7 @@ lg:mt-10
 
             {/* RIGHT SIDE */}
             <div
-className="
+                className="
 relative
 w-full
 max-w-[620px]
@@ -179,7 +218,7 @@ z-20
 mt-16
 lg:mt-20
 "
->
+            >
 
                 {/* GLOW */}
                 <motion.div
