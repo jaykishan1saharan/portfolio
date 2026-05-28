@@ -96,6 +96,29 @@ export const services = [
             }
 
         ],
+
+        testimonials: [
+            {
+                name: "Rahul Sharma",
+                role: "Business Owner",
+                review:
+                    "Amazing work. Delivered before deadline and exactly as discussed."
+            },
+
+            {
+                name: "Priya Verma",
+                role: "Startup Founder",
+                review:
+                    "Very professional communication and excellent UI design."
+            },
+
+            {
+                name: "Aman Patel",
+                role: "Freelancer",
+                review:
+                    "Fast delivery, responsive support and clean code quality."
+            }
+        ],
     },
 
     {
@@ -194,6 +217,29 @@ export const services = [
                 a: "Yes, revisions are included."
             }
 
+        ],
+
+        testimonials: [
+            {
+                name: "Rahul Sharma",
+                role: "Business Owner",
+                review:
+                    "Amazing work. Delivered before deadline and exactly as discussed."
+            },
+
+            {
+                name: "Priya Verma",
+                role: "Startup Founder",
+                review:
+                    "Very professional communication and excellent UI design."
+            },
+
+            {
+                name: "Aman Patel",
+                role: "Freelancer",
+                review:
+                    "Fast delivery, responsive support and clean code quality."
+            }
         ],
     },
 
@@ -294,6 +340,29 @@ export const services = [
             }
 
         ],
+
+        testimonials: [
+            {
+                name: "Rahul Sharma",
+                role: "Business Owner",
+                review:
+                    "Amazing work. Delivered before deadline and exactly as discussed."
+            },
+
+            {
+                name: "Priya Verma",
+                role: "Startup Founder",
+                review:
+                    "Very professional communication and excellent UI design."
+            },
+
+            {
+                name: "Aman Patel",
+                role: "Freelancer",
+                review:
+                    "Fast delivery, responsive support and clean code quality."
+            }
+        ],
     },
 
     {
@@ -392,6 +461,29 @@ export const services = [
                 a: "Yes, revisions are included."
             }
 
+        ],
+
+        testimonials: [
+            {
+                name: "Rahul Sharma",
+                role: "Business Owner",
+                review:
+                    "Amazing work. Delivered before deadline and exactly as discussed."
+            },
+
+            {
+                name: "Priya Verma",
+                role: "Startup Founder",
+                review:
+                    "Very professional communication and excellent UI design."
+            },
+
+            {
+                name: "Aman Patel",
+                role: "Freelancer",
+                review:
+                    "Fast delivery, responsive support and clean code quality."
+            }
         ],
     },
 ];

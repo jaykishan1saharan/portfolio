@@ -15,6 +15,31 @@ export default function ServiceModal({
     const [email, setEmail] = useState("");
     const [budget, setBudget] = useState("");
     const [message, setMessage] = useState("");
+    const [pages, setPages] = useState(1);
+    const [success, setSuccess] = useState(false);
+    const estimatedPrice = pages * 2000;
+
+    const handleSubmit = () => {
+
+        setSuccess(true);
+
+        const url = `https://wa.me/919881900876?text=
+Hello,%20my%20name%20is%20${name}
+
+%0A%0AI%20am%20interested%20in:%20${service.title}
+
+%0A%0AEmail:%20${email}
+
+%0A%0ABudget:%20${budget}
+
+%0A%0AProject%20Details:%20${message}
+`;
+
+        setTimeout(() => {
+            window.open(url, "_blank");
+        }, 1500);
+
+    };
 
     return (
 
@@ -409,6 +434,135 @@ p-5
 
                 </div>
 
+                {/* TESTIMONIALS */}
+
+                <div className="mt-12">
+
+                    <h3 className="
+text-3xl
+font-bold
+text-yellow-400
+mb-6
+">
+                        Client Reviews
+                    </h3>
+
+                    <div className="
+grid
+md:grid-cols-3
+gap-6
+">
+
+                        {service.testimonials?.map((item: any) => (
+
+                            <div
+                                key={item.name}
+                                className="
+bg-white/5
+border border-white/10
+rounded-2xl
+p-6
+hover:border-cyan-400
+transition
+"
+                            >
+
+                                <div className="text-yellow-400 text-xl">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+
+                                <p className="
+mt-4
+text-gray-300
+italic
+">
+                                    "{item.review}"
+                                </p>
+
+                                <div className="mt-6">
+
+                                    <h4 className="
+font-bold
+text-white
+">
+                                        {item.name}
+                                    </h4>
+
+                                    <p className="
+text-gray-400
+text-sm
+">
+                                        {item.role}
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </div>
+
+                {/* COST CALCULATOR */}
+
+                <div className="mt-12">
+
+                    <h3
+                        className="
+text-3xl
+font-bold
+text-cyan-400
+mb-6
+"
+                    >
+                        Cost Calculator
+                    </h3>
+
+                    <label
+                        htmlFor="pages"
+                        className="
+text-gray-300
+block
+mb-4
+"
+                    >
+                        Number of Pages
+                    </label>
+
+                    <input
+                        id="pages"
+                        aria-label="Number of Pages"
+                        type="range"
+                        min="1"
+                        max="20"
+                        value={pages}
+                        onChange={(e) =>
+                            setPages(Number(e.target.value))
+                        }
+                        className="w-full"
+                    />
+
+                    <div className="mt-4 flex justify-between">
+
+                        <p>
+                            Pages: {pages}
+                        </p>
+
+                        <p
+                            className="
+text-cyan-400
+font-bold
+"
+                        >
+                            ₹{estimatedPrice.toLocaleString()}
+                        </p>
+
+                    </div>
+
+                </div>
+
                 {/* REQUEST FORM */}
 
                 <div className="mt-12">
@@ -499,20 +653,8 @@ p-5
 
                 <div className="mt-10 flex flex-wrap gap-4">
 
-                    <a
-                        href={`https://wa.me/919881900876?text=
-Hello,%20my%20name%20is%20${name}
-
-%0A%0AI%20am%20interested%20in:%20${service.title}
-
-%0A%0AEmail:%20${email}
-
-%0A%0ABudget:%20${budget}
-
-%0A%0AProject%20Details:%20${message}
-`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={handleSubmit}
                         className="
   px-8
   py-4
@@ -525,7 +667,7 @@ Hello,%20my%20name%20is%20${name}
   "
                     >
                         Book Service 🚀
-                    </a>
+                    </button>
 
                     <button
                         onClick={onClose}
@@ -546,6 +688,62 @@ Hello,%20my%20name%20is%20${name}
                 </div>
 
             </motion.div>
+
+            {success && (
+
+                <div
+                    className="
+fixed
+inset-0
+bg-black/70
+flex
+items-center
+justify-center
+z-[1000]
+"
+                >
+
+                    <div
+                        className="
+bg-[#0f172a]
+border
+border-green-500
+rounded-3xl
+p-10
+text-center
+animate-pulse
+"
+                    >
+
+                        <div className="text-6xl">
+                            ✅
+                        </div>
+
+                        <h3
+                            className="
+text-3xl
+font-bold
+text-green-400
+mt-4
+"
+                        >
+                            Request Sent!
+                        </h3>
+
+                        <p
+                            className="
+text-gray-400
+mt-2
+"
+                        >
+                            Opening WhatsApp...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            )}
 
         </motion.div>
 
