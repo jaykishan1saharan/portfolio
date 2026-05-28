@@ -31,7 +31,26 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="home" className="relative h-screen flex items-center px-20 text-white overflow-hidden bg-gradient-to-br from-black via-[#0f172a] to-[#1e3a8a]">
+        <section
+  id="home"
+  className="
+  relative
+  min-h-screen
+  flex
+  flex-col
+  lg:flex-row
+  items-center
+  justify-between
+  px-6
+  md:px-10
+  lg:px-20
+  overflow-hidden
+  bg-gradient-to-br
+  from-black
+  via-[#081120]
+  to-[#142850]
+  "
+>
             <ParticlesBackground />
 
             <div id="cursor-glow" className="cursor-glow"></div>
@@ -43,7 +62,14 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -80 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
-                className="max-w-xl z-20 ml-10"
+                className="
+max-w-[620px]
+z-20
+text-center
+lg:text-left
+mt-32
+lg:mt-10
+"
             >
 
                 <p className="text-green-400 text-lg md:text-xl mb-2 flex items-center gap-2">
@@ -52,12 +78,12 @@ export default function Hero() {
                 </p>
 
                 {/* RGB NAME */}
-                <h1 className="text-5xl font-bold rgb-text">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold rgb-text leading-tight">
                     Jaykishan Saharan
                 </h1>
 
                 {/* TYPING ROLE */}
-                <h2 className="text-cyan-400 text-2xl mt-3">
+                <h2 className="text-cyan-400 text-xl md:text-2xl mt-3">
                     <Typewriter
                         words={[
                             "Full Stack Developer",
@@ -74,7 +100,7 @@ export default function Hero() {
                 </p>
 
                 {/* BUTTONS */}
-                <div className="mt-6 flex gap-4">
+                <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 
                     <motion.button
                         whileHover={{
@@ -101,7 +127,7 @@ export default function Hero() {
                 </div>
 
                 {/* SOCIAL ICONS */}
-                <div className="flex gap-6 mt-6 text-2xl">
+                <div className="flex gap-6 mt-6 text-2xl justify-center lg:justify-start flex-wrap">
 
                     <FaGithub className="text-white hover:text-gray-300 hover:scale-125 transition cursor-pointer" />
                     <FaLinkedin className="text-[#0A66C2] hover:scale-125 transition cursor-pointer" />
@@ -112,7 +138,7 @@ export default function Hero() {
                 </div>
 
                 {/* STATS */}
-                <div className="flex gap-6 mt-10">
+                <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-10">
 
                     <motion.div
                         whileHover={{
@@ -140,7 +166,20 @@ export default function Hero() {
             </motion.div>
 
             {/* RIGHT SIDE */}
-            <div className="relative w-[700px] h-[650px] flex items-center justify-center z-20 ml-auto mt-20" >
+            <div
+className="
+relative
+w-full
+max-w-[620px]
+h-[620px]
+flex
+items-center
+justify-center
+z-20
+mt-16
+lg:mt-20
+"
+>
 
                 {/* GLOW */}
                 <motion.div
@@ -167,7 +206,7 @@ export default function Hero() {
                         duration: 18,
                         ease: "linear",
                     }}
-                    className="absolute w-[360px] h-[360px] rounded-full border border-cyan-400/30 border-dashed shadow-[0_0_40px_rgba(34,211,238,0.25)]"
+                    className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px] rounded-full border border-cyan-400/30 border-dashed shadow-[0_0_40px_rgba(34,211,238,0.25)]"
                 >
 
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 text-cyan-400 text-4xl">
@@ -196,7 +235,7 @@ export default function Hero() {
                         duration: 28,
                         ease: "linear",
                     }}
-                    className="absolute w-[520px] h-[520px] rounded-full border border-purple-400/30 border-dashed shadow-[0_0_50px_rgba(168,85,247,0.25)]"
+                    className="absolute w-[240px] h-[240px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full border border-purple-400/30 border-dashed shadow-[0_0_50px_rgba(168,85,247,0.25)]"
                 >
 
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 text-yellow-400 text-4xl">
@@ -225,7 +264,7 @@ export default function Hero() {
                         duration: 40,
                         ease: "linear",
                     }}
-                    className="absolute w-[700px] h-[700px] rounded-full border border-pink-400/30 border-dashed shadow-[0_0_60px_rgba(236,72,153,0.25)]"
+                    className="absolute w-[320px] h-[320px] md:w-[500px] md:h-[500px] lg:w-[620px] lg:h-[620px] rounded-full border border-pink-400/30 border-dashed shadow-[0_0_60px_rgba(236,72,153,0.25)]"
                 >
 
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 text-yellow-300 text-4xl">
@@ -263,21 +302,21 @@ export default function Hero() {
                 </motion.div>
 
                 {/* INNER LABEL */}
-                <div className="absolute top-[130px] left-1/2 -translate-x-1/2 text-center z-20">
+                <div className="absolute top-[125px] left-1/2 -translate-x-1/2 text-center z-20">
                     <p className="text-cyan-400 text-sm font-bold tracking-widest">
                         1900 - 1950
                     </p>
                 </div>
 
                 {/* MIDDLE LABEL */}
-                <div className="absolute top-[50px] left-1/2 -translate-x-1/2 text-center z-20">
+                <div className="absolute top-[45px] left-1/2 -translate-x-1/2 text-center z-20">
                     <p className="text-purple-400 text-sm font-bold tracking-widest">
                         1950 - 2000
                     </p>
                 </div>
 
                 {/* OUTER LABEL */}
-                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-center z-20">
+                <div className="absolute top-[-18px] left-1/2 -translate-x-1/2 text-center z-20">
                     <p className="text-pink-400 text-sm font-bold tracking-widest">
                         2000 - NOW
                     </p>

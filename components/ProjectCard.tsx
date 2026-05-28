@@ -18,19 +18,50 @@ export default function ProjectCard({
 
   return (
     <section
-      className="max-w-7xl mx-auto py-12 px-8 rounded-3xl border border-cyan-500/10 bg-gradient-to-br from-[#060b16] via-[#0b1020] to-[#130d2f] backdrop-blur-xl shadow-[0_0_60px_rgba(34,211,238,0.12)] text-white">
+      className="
+max-w-7xl
+mx-auto
+py-12
+px-4
+sm:px-6
+lg:px-8
+rounded-3xl
+border
+border-cyan-500/10
+bg-gradient-to-br
+from-[#060b16]
+via-[#0b1020]
+to-[#130d2f]
+backdrop-blur-xl
+shadow-[0_0_60px_rgba(34,211,238,0.12)]
+text-white
+overflow-hidden
+">
 
       {/* Heading */}
       <p className="text-cyan-400 font-semibold mb-2">
         PROJECT {number.toString().padStart(2, "0")}
       </p>
 
-      <h2 className="text-5xl font-bold mb-6">
+      <h2 className="
+text-3xl
+sm:text-4xl
+lg:text-5xl
+font-bold
+mb-6
+leading-tight
+">
         {project.title}
       </h2>
 
       {/* Description */}
-      <p className="text-gray-400 text-lg max-w-4xl leading-relaxed">
+      <p className="
+text-gray-400
+text-base
+sm:text-lg
+max-w-4xl
+leading-relaxed
+">
         {project.description}
       </p>
 
@@ -55,7 +86,12 @@ export default function ProjectCard({
       </div>
 
       {/* Stats */}
-      <div className="flex gap-10 mt-10">
+      <div className="
+flex
+flex-wrap
+gap-8
+mt-10
+">
 
         <div>
           <p className="text-cyan-400 text-3xl font-bold">
@@ -106,21 +142,30 @@ export default function ProjectCard({
       </ul>
 
       {/* Buttons */}
-      <div className="flex gap-5 mt-10">
+      <div className="
+flex
+flex-col
+sm:flex-row
+gap-4
+mt-10
+">
 
         <a
           href={project.github}
           target="_blank"
           className="
-            px-8
-            py-3
-            rounded-2xl
-            bg-cyan-500
-            text-black
-            font-bold
-            hover:scale-105
-            transition
-          "
+w-full
+sm:w-auto
+text-center
+px-8
+py-3
+rounded-2xl
+bg-cyan-500
+text-black
+font-bold
+hover:scale-105
+transition
+"
         >
           GitHub
         </a>
@@ -129,14 +174,17 @@ export default function ProjectCard({
           href={project.demo}
           target="_blank"
           className="
-            px-8
-            py-3
-            rounded-2xl
-            border
-            border-cyan-500
-            text-cyan-300
-            hover:bg-cyan-500/10
-          "
+w-full
+sm:w-auto
+text-center
+px-8
+py-3
+rounded-2xl
+border
+border-cyan-500
+text-cyan-300
+hover:bg-cyan-500/10
+"
         >
           Live Demo
         </a>
@@ -160,6 +208,8 @@ export default function ProjectCard({
             })
           }
           className="
+          hidden
+sm:flex
       absolute
       left-2
       top-1/2
@@ -185,6 +235,8 @@ export default function ProjectCard({
             })
           }
           className="
+          hidden
+sm:flex
       absolute
       right-2
       top-1/2
@@ -204,7 +256,23 @@ export default function ProjectCard({
 
           {project.images.map((image: string) => (
 
-            <div key={image} className="min-w-[450px] h-[260px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-white/5 snap-center hover:scale-[1.02] transition-all duration-300">
+            <div key={image} className="
+min-w-[260px]
+sm:min-w-[340px]
+lg:min-w-[450px]
+h-[180px]
+sm:h-[220px]
+lg:h-[260px]
+rounded-2xl
+overflow-hidden
+border
+border-cyan-500/20
+bg-white/5
+snap-center
+hover:scale-[1.02]
+transition-all
+duration-300
+">
 
               <img
                 src={image}

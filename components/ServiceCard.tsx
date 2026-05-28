@@ -23,7 +23,7 @@ from-[#08111f]
 via-[#0b1020]
 to-[#12112a]
 backdrop-blur-xl
-p-8
+p-5 sm:p-8
 hover:border-cyan-400
 transition-all
 duration-500
@@ -48,12 +48,23 @@ transition
       <div className="relative z-10">
 
         <div
-          className="text-5xl mb-4 animate-bounce"
+          className="
+text-4xl
+sm:text-5xl
+mb-4
+animate-bounce
+"
         >
           {service.icon}
         </div>
 
-        <h3 className="text-2xl font-bold text-white">
+        <h3 className="
+text-xl
+sm:text-2xl
+font-bold
+text-white
+leading-tight
+">
           {service.title}
         </h3>
 
@@ -79,7 +90,19 @@ transition
         </ul>
 
         <button
-          className="mt-6 px-5 py-3 rounded-xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+          className="
+mt-6
+w-full
+sm:w-auto
+px-5
+py-3
+rounded-xl
+bg-cyan-500
+text-black
+font-semibold
+hover:scale-105
+transition
+"
         >
           View Details →
         </button>

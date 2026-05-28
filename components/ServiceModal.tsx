@@ -55,7 +55,7 @@ bg-black/90
 flex
 items-center
 justify-center
-p-6
+p-2 sm:p-4 lg:p-6
 "
         >
 
@@ -84,7 +84,7 @@ bg-gradient-to-br
 from-[#08111f]
 via-[#0b1020]
 to-[#13132b]
-p-10
+p-5 sm:p-7 lg:p-10
 text-white
 relative
 "
@@ -102,20 +102,40 @@ relative
                     ✕
                 </button>
 
-                <h2 className="text-5xl font-bold">
+                <h2 className="
+text-2xl sm:text-3xl
+sm:text-4xl
+lg:text-5xl
+font-bold
+leading-tight
+pr-10
+">
                     {service.title}
                 </h2>
 
-                <p className="text-gray-400 mt-4 text-lg">
+                <p className="
+text-gray-400
+mt-4
+text-sm
+sm:text-base
+lg:text-lg
+leading-relaxed
+">
                     {service.description}
                 </p>
 
                 {/* Service Stats */}
 
-                <div className="flex gap-10 mt-8">
+                <div className="
+flex
+flex-wrap
+gap-6
+sm:gap-10
+mt-8
+">
 
                     <div>
-                        <h4 className="text-4xl font-bold text-cyan-400">
+                        <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400">
                             3+
                         </h4>
                         <p className="text-gray-400">
@@ -124,7 +144,7 @@ relative
                     </div>
 
                     <div>
-                        <h4 className="text-4xl font-bold text-cyan-400">
+                        <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400">
                             10+
                         </h4>
                         <p className="text-gray-400">
@@ -133,7 +153,7 @@ relative
                     </div>
 
                     <div>
-                        <h4 className="text-4xl font-bold text-cyan-400">
+                        <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400">
                             100%
                         </h4>
                         <p className="text-gray-400">
@@ -146,11 +166,11 @@ relative
                 {/* WHAT I PROVIDE */}
 
                 <div className="mt-10">
-                    <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-cyan-400 mb-4">
                         What I Provide
                     </h3>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {(service.provide || []).map((item: string) => (
                             <div
                                 key={item}
@@ -170,7 +190,7 @@ relative
                 {/* PROCESS */}
 
                 <div className="mt-10">
-                    <h3 className="text-2xl font-semibold text-purple-400 mb-4">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-purple-400 mb-4">
                         Work Process
                     </h3>
 
@@ -183,7 +203,7 @@ relative
           flex
           items-center
           gap-4
-          p-4
+          p-3 sm:p-4
           rounded-xl
           bg-white/5
           border border-white/10
@@ -220,27 +240,27 @@ relative
                         Pricing
                     </h3>
 
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <div className="p-2 sm:p-4 lg:p-6 rounded-2xl bg-white/5 border border-white/10">
                             <h4 className="text-xl font-bold">Basic</h4>
-                            <p className="text-cyan-400 text-3xl mt-2">₹5,000+</p>
+                            <p className="text-cyan-400 text-2xl sm:text-3xl mt-2">₹5,000+</p>
                             <p className="text-gray-400 mt-2">
                                 Simple landing page
                             </p>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-cyan-500/10 border border-cyan-500">
+                        <div className="p-2 sm:p-4 lg:p-6 rounded-2xl bg-cyan-500/10 border border-cyan-500">
                             <h4 className="text-xl font-bold">Standard</h4>
-                            <p className="text-cyan-400 text-3xl mt-2">₹10,000+</p>
+                            <p className="text-cyan-400 text-2xl sm:text-3xl mt-2">₹10,000+</p>
                             <p className="text-gray-400 mt-2">
                                 Multi-page website
                             </p>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <div className="p-2 sm:p-4 lg:p-6 rounded-2xl bg-white/5 border border-white/10">
                             <h4 className="text-xl font-bold">Premium</h4>
-                            <p className="text-cyan-400 text-3xl mt-2">₹20,000+</p>
+                            <p className="text-cyan-400 text-2xl sm:text-3xl mt-2">₹20,000+</p>
                             <p className="text-gray-400 mt-2">
                                 Full custom solution
                             </p>
@@ -262,7 +282,7 @@ relative
                             <li
                                 key={term}
                                 className="
-        p-4
+        p-2 sm:p-4 lg:p-6
         rounded-xl
         bg-white/5
         border border-white/10
@@ -279,7 +299,7 @@ relative
                 <div className="mt-12">
 
                     <h3 className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-cyan-400
 mb-6
@@ -287,7 +307,7 @@ mb-6
                         Pricing Packages
                     </h3>
 
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                         {service.pricing?.map((pkg: any) => (
 
@@ -341,7 +361,7 @@ mt-3
                 <div className="mt-12">
 
                     <h3 className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-purple-400
 mb-6
@@ -397,7 +417,7 @@ font-bold
                 <div className="mt-12">
 
                     <h3 className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-pink-400
 mb-6
@@ -439,7 +459,7 @@ p-5
                 <div className="mt-12">
 
                     <h3 className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-yellow-400
 mb-6
@@ -461,7 +481,7 @@ gap-6
 bg-white/5
 border border-white/10
 rounded-2xl
-p-6
+p-2 sm:p-4 lg:p-6
 hover:border-cyan-400
 transition
 "
@@ -511,7 +531,7 @@ text-sm
 
                     <h3
                         className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-cyan-400
 mb-6
@@ -651,11 +671,18 @@ font-bold
 
                 {/* BUTTONS */}
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="
+mt-10
+flex
+flex-col
+sm:flex-row
+gap-4
+">
 
                     <button
                         onClick={handleSubmit}
                         className="
+                        w-full sm:w-auto text-center justify-center
   px-8
   py-4
   rounded-2xl
@@ -672,6 +699,7 @@ font-bold
                     <button
                         onClick={onClose}
                         className="
+                        w-full sm:w-auto text-center justify-center
     px-8
     py-4
     rounded-2xl
@@ -709,7 +737,7 @@ bg-[#0f172a]
 border
 border-green-500
 rounded-3xl
-p-10
+p-5 sm:p-7 lg:p-10
 text-center
 animate-pulse
 "
@@ -721,7 +749,7 @@ animate-pulse
 
                         <h3
                             className="
-text-3xl
+text-2xl sm:text-3xl
 font-bold
 text-green-400
 mt-4

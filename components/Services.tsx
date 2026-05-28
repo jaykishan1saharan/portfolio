@@ -16,8 +16,12 @@ export default function Services() {
             className="
 max-w-7xl
 mx-auto
-py-32
-px-8
+py-20
+sm:py-24
+lg:py-32
+px-4
+sm:px-6
+lg:px-8
 "
         >
 
@@ -29,10 +33,13 @@ px-8
 
                 <h2
                     className="
-text-6xl
+text-4xl
+sm:text-5xl
+lg:text-6xl
 font-bold
 text-white
 mt-4
+leading-tight
 "
                 >
                     My Services
@@ -40,10 +47,14 @@ mt-4
 
                 <p
                     className="
-text-white
+text-gray-300
 mt-6
 max-w-2xl
 mx-auto
+text-sm
+sm:text-base
+leading-relaxed
+px-2
 "
                 >
                     Helping businesses and individuals
@@ -57,8 +68,10 @@ mx-auto
             <div
                 className="
 grid
+grid-cols-1
 md:grid-cols-2
-gap-8
+gap-6
+sm:gap-8
 "
             >
 

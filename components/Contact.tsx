@@ -7,31 +7,79 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="min-h-screen relative flex items-center justify-center px-6 py-24 overflow-hidden bg-[#020617]"
+            className="
+min-h-screen
+relative
+flex
+items-center
+justify-center
+px-4
+sm:px-6
+lg:px-10
+py-20
+overflow-hidden
+bg-[#020617]
+"
         >
 
             {/* BACKGROUND GLOW */}
             <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full top-20 left-20"></div>
 
-            <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center z-10">
+            <div className="
+max-w-7xl
+w-full
+grid
+grid-cols-1
+lg:grid-cols-2
+gap-20
+items-center
+z-10
+">
 
                 {/* LEFT SIDE */}
                 <div>
 
-                    <h2 className="text-6xl font-bold text-white leading-tight">
+                    <h2 className="
+text-4xl
+sm:text-5xl
+lg:text-6xl
+font-bold
+text-white
+leading-tight
+text-center
+lg:text-left
+">
                         Let’s Build Something{" "}
                         <span className="text-cyan-400">
                             Amazing
                         </span>
                     </h2>
 
-                    <p className="text-gray-400 mt-8 text-lg leading-relaxed max-w-xl">
+                    <p className="
+text-gray-400
+mt-8
+text-base
+md:text-lg
+leading-relaxed
+max-w-xl
+text-center
+lg:text-left
+mx-auto
+lg:mx-0
+">
                         Have a project idea, collaboration, or just want to say hello?
                         Send me a message and let’s create futuristic digital experiences together.
                     </p>
 
                     {/* INFO */}
-                    <div className="mt-10 space-y-6">
+                    <div className="
+mt-10
+space-y-6
+flex
+flex-col
+items-center
+lg:items-start
+">
 
                         <div className="flex items-center gap-4">
 
@@ -74,10 +122,30 @@ export default function Contact() {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="relative flex items-center justify-center">
+                <div className="
+relative
+flex
+items-center
+justify-center
+w-full
+">
 
                     {/* MAIN CARD */}
-                    <div className="relative w-[700px] h-[600px] rounded-[35px] border border-cyan-500/20 bg-white/5 backdrop-blur-xl overflow-hidden shadow-[0_0_60px_rgba(34,211,238,0.15)]">
+                    <div className="
+relative
+w-full
+max-w-[700px]
+h-[520px]
+sm:h-[580px]
+lg:h-[600px]
+rounded-[35px]
+border
+border-cyan-500/20
+bg-white/5
+backdrop-blur-xl
+overflow-hidden
+shadow-[0_0_60px_rgba(34,211,238,0.15)]
+">
 
                         {/* GIRL MESSAGE */}
 
@@ -92,7 +160,7 @@ export default function Contact() {
                                 ease: "easeInOut"
                             }}
                         >
-                            <div className=" relative px-6 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-pink-400/40 shadow-[0_0_35px_rgba(236,72,153,0.35)] text-white text-sm leading-relaxed max-w-[260px] animate-pulse">
+                            <div className=" relative px-6 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-pink-400/40 shadow-[0_0_35px_rgba(236,72,153,0.35)] text-white text-sm leading-relaxed max-w-[180px] sm:max-w-[220px] lg:max-w-[260px] animate-pulse">
                                 Oye TinCan! 👀 <br />
                                 Kaam kar na dhang se,<br />
                                 warna scrap kar dungi! 😤
@@ -106,7 +174,22 @@ export default function Contact() {
                         <img
                             src="/girl.png"
                             alt="girl"
-                            className="absolute left-6 bottom-28 h-[300px] w-[300px] z-20 animate-float"
+                            className="
+absolute
+left-2
+sm:left-6
+bottom-24
+sm:bottom-28
+h-[180px]
+w-[180px]
+sm:h-[240px]
+sm:w-[240px]
+lg:h-[300px]
+lg:w-[300px]
+z-20
+animate-float
+object-contain
+"
                         />
 
                         {/* ROBOT MESSAGE */}
@@ -122,7 +205,7 @@ export default function Contact() {
                                 ease: "easeInOut"
                             }}
                         >
-                            <div className=" relative px-6 py-4 rounded-full bg-cyan-400/5 backdrop-blur-xl border border-cyan-400/40 shadow-[0_0_35px_rgba(34,211,238,0.35)] text-white text-sm leading-relaxed max-w-[240px] animate-pulse">
+                            <div className=" relative px-6 py-4 rounded-full bg-cyan-400/5 backdrop-blur-xl border border-cyan-400/40 shadow-[0_0_35px_rgba(34,211,238,0.35)] text-white text-sm leading-relaxed max-w-[170px] sm:max-w-[220px] lg:max-w-[240px] animate-pulse">
                                 Hey Human! 👋 <br />
                                 Choose an option <br />
                                 below to contact me!
@@ -134,9 +217,29 @@ export default function Contact() {
                         </motion.div>
 
                         {/* ROBOT PLACEHOLDER */}
-                        <div className="absolute right-0 top-0 w-[420px] h-[420px] flex items-center justify-center">
+                        <div className="
+absolute
+right-0
+top-6
+w-[220px]
+h-[220px]
+sm:w-[320px]
+sm:h-[320px]
+lg:w-[420px]
+lg:h-[420px]
+flex
+items-center
+justify-center
+">
 
-                            <div className="w-[450px] h-[400px]">
+                            <div className="
+w-[220px]
+h-[220px]
+sm:w-[320px]
+sm:h-[320px]
+lg:w-[450px]
+lg:h-[400px]
+">
                                 <div
                                     className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-cyan-400/20 blur-3xl animate-pulse" />
                                 <motion.div
@@ -244,7 +347,19 @@ export default function Contact() {
                         </motion.div>
 
                         {/* BUTTONS */}
-                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-6 z-30">
+                        <div className="
+absolute
+bottom-6
+left-1/2
+-translate-x-1/2
+flex
+flex-col
+sm:flex-row
+gap-4
+z-30
+w-[90%]
+sm:w-auto
+">
 
                             {/* CALL BUTTON */}
                             <a

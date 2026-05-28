@@ -20,7 +20,7 @@ export default function About() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-5xl font-bold">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                         About <span className="rgb-text">Me</span>
                     </h2>
 
@@ -41,7 +41,7 @@ export default function About() {
                         className="space-y-6"
                     >
 
-                        <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
                             Turning Ideas Into
                             <span className="text-cyan-400"> Interactive </span>
                             Digital Experiences
@@ -297,7 +297,7 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-5xl font-bold">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                             Tech <span className="text-cyan-400">Stack</span>
                         </h2>
 

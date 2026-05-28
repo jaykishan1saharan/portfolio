@@ -31,19 +31,18 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes rgbText {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
 .animate-rgb {
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff9900,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #ff00ff,
-    #ff0000
-  );
-  background-size: 300% 300%;
-  animation: rgb 5s linear infinite;
+  animation: rgbText 6s linear infinite;
 }
 
 @keyframes rgbMove {
@@ -185,4 +184,14 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #22d3ee;
   border-radius: 999px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }

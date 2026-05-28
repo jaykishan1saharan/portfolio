@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const navItems = ["About", "Skills", "Projects", "Services", "Contact"];
@@ -12,6 +13,18 @@ export default function Navbar() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    else {
+      document.body.style.overflow = "auto";
+    }
+
+  }, [menuOpen]);
 
   const sendEmail = async () => {
 
@@ -58,22 +71,66 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/5 border-b border-white/10">
+      <nav className="
+fixed
+top-0
+left-0
+w-full
+z-50
+backdrop-blur-xl
+bg-black/30
+border-b
+border-cyan-500/10
+">
 
-        <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
+        <div className="
+max-w-7xl
+mx-auto
+flex
+items-center
+justify-between
+px-4
+sm:px-6
+lg:px-8
+py-4
+">
 
           {/* LOGO */}
           <a href="#home">
             <motion.h1
               whileHover={{ scale: 1.1 }}
-              className="text-2xl font-bold rgb-text cursor-pointer"
+              className="
+  text-4xl
+  font-extrabold
+  tracking-wide
+  inline-block
+  "
+            ><span
+              className="
+    bg-gradient-to-r
+    from-cyan-400
+    via-blue-500
+    to-purple-500
+    bg-clip-text
+    text-transparent
+    animate-rgb
+    "
             >
-              Portfolio
+                Portfolio
+              </span>
             </motion.h1>
           </a>
 
           {/* NAV ITEMS */}
-          <ul className="flex gap-10 text-gray-300">
+          <ul
+            className="
+hidden
+md:flex
+gap-10
+text-gray-300
+items-center
+"
+          >
 
             {navItems.map((item, index) => (
               <li key={index} className="relative cursor-pointer group">
@@ -98,6 +155,25 @@ export default function Navbar() {
 
           </ul>
 
+          <button
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
+            className="
+md:hidden
+text-white
+z-[100]
+"
+          >
+            {
+              menuOpen ? (
+                <X size={32} />
+              ) : (
+                <Menu size={32} />
+              )
+            }
+          </button>
+
           {/* BUTTON */}
           <motion.button
             onClick={() => setOpenModal(true)}
@@ -105,12 +181,132 @@ export default function Navbar() {
               scale: 1.05,
               boxShadow: "0px 0px 20px rgba(34,211,238,0.6)",
             }}
-            className="bg-cyan-500 text-black px-5 py-2 rounded-xl font-medium"
+            className="
+hidden
+md:block
+bg-cyan-500
+text-black
+px-5
+py-2
+rounded-xl
+font-medium
+"
           >
             Let's Talk
           </motion.button>
 
         </div>
+
+        <AnimatePresence>
+
+          {menuOpen && (
+
+            <>
+
+              <motion.div
+
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+
+                onClick={() =>
+                  setMenuOpen(false)
+                }
+
+                className="
+fixed
+inset-0
+bg-black/60
+backdrop-blur-sm
+z-40
+"
+              />
+
+              <motion.div
+
+                initial={{
+                  x: "100%"
+                }}
+
+                animate={{
+                  x: 0
+                }}
+
+                exit={{
+                  x: "100%"
+                }}
+
+                transition={{
+                  duration: 0.3
+                }}
+
+                className="
+fixed
+top-0
+right-0
+h-screen
+w-[80%]
+max-w-[320px]
+bg-[#020617]
+border-l
+border-cyan-500/20
+z-50
+flex
+flex-col
+gap-8
+pt-28
+px-8
+"
+              >
+
+                {navItems.map((item, index) => (
+
+                  <a
+                    key={index}
+                    href={`#${item.toLowerCase()}`}
+
+                    onClick={() =>
+                      setMenuOpen(false)
+                    }
+
+                    className="
+text-white
+text-xl
+hover:text-cyan-400
+transition
+"
+                  >
+                    {item}
+                  </a>
+
+                ))}
+
+                <button
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setOpenModal(true);
+                  }}
+
+                  className="
+mt-4
+bg-cyan-500
+text-black
+px-5
+py-3
+rounded-xl
+font-medium
+"
+                >
+                  Let's Talk
+                </button>
+
+              </motion.div>
+
+            </>
+
+          )}
+
+        </AnimatePresence>
 
       </nav>
 
