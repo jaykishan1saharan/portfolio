@@ -23,9 +23,9 @@ export const projects = [
       "Secure Data Storage",
     ],
 
-    github: "#",
+    github: "https://github.com/jaykishan1saharan/Smart_Billing_System",
 
-    demo: "#",
+    demo: "https://smart-billing-system-lime.vercel.app/",
 
     images: [
       "/projects/billing/1.png",
@@ -33,6 +33,29 @@ export const projects = [
       "/projects/billing/3.png",
       "/projects/billing/4.png",
       "/projects/billing/5.png",
+      "/projects/billing/6.png",
+      "/projects/billing/7.png",
+      "/projects/billing/8.png",
+      "/projects/billing/9.png",
+      "/projects/billing/10.png",
+      "/projects/billing/11.png",
+      "/projects/billing/12.png",
+      "/projects/billing/13.png",
+      "/projects/billing/14.png",
+      "/projects/billing/15.png",
+      "/projects/billing/16.png",
+      "/projects/billing/17.png",
+      "/projects/billing/18.png",
+      "/projects/billing/19.png",
+      "/projects/billing/20.png",
+      "/projects/billing/21.png",
+      "/projects/billing/22.png",
+      "/projects/billing/23.png",
+      "/projects/billing/24.png",
+      "/projects/billing/25.png",
+      "/projects/billing/26.png",
+      "/projects/billing/27.png",
     ],
+
   },
 ];
