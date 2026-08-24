@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import VisitorTracker from "@/components/analytics/VisitorTracker";
 
 
 const geistSans = Geist({
@@ -31,6 +32,7 @@ export default function RootLayout({
     >
       <body>
         <ParticlesBackground />
+        <VisitorTracker />
         {children}
       </body>
     </html>

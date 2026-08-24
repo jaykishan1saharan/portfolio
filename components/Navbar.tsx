@@ -153,6 +153,25 @@ items-center
               </li>
             ))}
 
+            {/* ADMIN */}
+            <li className="relative cursor-pointer group">
+
+              <a
+                href="/admin/analytics"
+                className="block"
+              >
+                <motion.span
+                  whileHover={{ y: -2 }}
+                  className="inline-block"
+                >
+                  Admin
+                </motion.span>
+
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+
+            </li>
+
           </ul>
 
           <button
@@ -280,6 +299,24 @@ transition
                   </a>
 
                 ))}
+
+                {/* ADMIN */}
+
+                <a
+                  href="/admin/analytics"
+                  onClick={() =>
+                    setMenuOpen(false)
+                  }
+
+                  className="
+text-white
+text-xl
+hover:text-cyan-400
+transition
+"
+                >
+                  Admin
+                </a>
 
                 <button
                   onClick={() => {
