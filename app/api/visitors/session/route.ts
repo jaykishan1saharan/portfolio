@@ -79,9 +79,17 @@ export async function POST(
         $10
       )
       RETURNING
-        session_id,
-        started_at,
-        is_active
+  session_id,
+  session_number,
+  session_code,
+  country,
+  region,
+  city,
+  device_type,
+  browser,
+  os,
+  started_at,
+  is_active
       `,
       [
         sessionId,
@@ -97,15 +105,45 @@ export async function POST(
       ]
     );
 
+    const session = result.rows[0];
+
+const sessionCode =
+  session.session_code ||
+  `SES-${String(
+    session.session_number
+  ).padStart(6, "0")}`;
+
+const location =
+  [
+    session.city,
+    session.region,
+    session.country,
+  ]
+    .filter(Boolean)
+    .join(", ") ||
+  "Location unavailable";
+
+const device =
+  [
+    session.os,
+    session.browser,
+  ]
+    .filter(Boolean)
+    .join(" • ") ||
+  "Unknown device";
+
     // Send push notification
     try {
       await sendNotificationToAllDevices({
-        title:
-          "🔔 New Portfolio Visitor",
-        body:
-          "Someone just opened your portfolio.",
-        type: "visitor_session",
-      });
+  title: "🔔 New Portfolio Visitor",
+
+  body:
+    `${sessionCode}\n` +
+    `📍 ${location}\n` +
+    `💻 ${device}`,
+
+  type: "visitor_session",
+});
     } catch (notificationError) {
       console.error(
         "Visitor notification error:",
