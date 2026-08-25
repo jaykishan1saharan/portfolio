@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { pool } from "@/lib/db/db";
+import {
+  sendNotificationToAllDevices,
+} from "@/lib/notifications/sendNotification";
 
-export async function POST(request: NextRequest) {
+export async function POST(
+  request: NextRequest
+) {
   try {
     const body = await request.json();
 
@@ -20,8 +25,11 @@ export async function POST(request: NextRequest) {
     const sessionId = crypto.randomUUID();
 
     // Get visitor IP from request headers
-    const forwardedFor = request.headers.get("x-forwarded-for");
-    const realIp = request.headers.get("x-real-ip");
+    const forwardedFor =
+      request.headers.get("x-forwarded-for");
+
+    const realIp =
+      request.headers.get("x-real-ip");
 
     const ip =
       forwardedFor?.split(",")[0]?.trim() ||
@@ -35,7 +43,8 @@ export async function POST(request: NextRequest) {
       .digest("hex");
 
     // Get browser user-agent
-    const userAgent = request.headers.get("user-agent");
+    const userAgent =
+      request.headers.get("user-agent");
 
     const result = await pool.query(
       `
@@ -88,18 +97,40 @@ export async function POST(request: NextRequest) {
       ]
     );
 
+    // Send push notification
+    try {
+      await sendNotificationToAllDevices({
+        title:
+          "🔔 New Portfolio Visitor",
+        body:
+          "Someone just opened your portfolio.",
+        type: "visitor_session",
+      });
+    } catch (notificationError) {
+      console.error(
+        "Visitor notification error:",
+        notificationError
+      );
+    }
+
     return NextResponse.json({
       success: true,
-      message: "Visitor session created",
+      message:
+        "Visitor session created",
       session: result.rows[0],
     });
+
   } catch (error) {
-    console.error("Visitor session error:", error);
+    console.error(
+      "Visitor session error:",
+      error
+    );
 
     return NextResponse.json(
       {
         success: false,
-        message: "Failed to create visitor session",
+        message:
+          "Failed to create visitor session",
       },
       { status: 500 }
     );
